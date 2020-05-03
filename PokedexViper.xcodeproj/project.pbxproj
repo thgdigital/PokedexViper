@@ -14,6 +14,8 @@
 		F36AEEED245E69B70053F40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36AEEEC245E69B70053F40A /* Assets.xcassets */; };
 		F36AEEF0245E69B70053F40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36AEEEE245E69B70053F40A /* LaunchScreen.storyboard */; };
 		F36AEEFB245E69B70053F40A /* PokedexViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEFA245E69B70053F40A /* PokedexViperTests.swift */; };
+		F36AEF07245E70150053F40A /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEF06245E70150053F40A /* Typography.swift */; };
+		F36AEF09245E721F0053F40A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEF08245E721F0053F40A /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		F36AEEF6245E69B70053F40A /* PokedexViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36AEEFA245E69B70053F40A /* PokedexViperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViperTests.swift; sourceTree = "<group>"; };
 		F36AEEFC245E69B70053F40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F36AEF06245E70150053F40A /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		F36AEF08245E721F0053F40A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		F36AEEE2245E69B30053F40A /* PokedexViper */ = {
 			isa = PBXGroup;
 			children = (
+				F36AEF05245E6FEC0053F40A /* Style Guide */,
 				F36AEEE3245E69B30053F40A /* AppDelegate.swift */,
 				F36AEEE5245E69B30053F40A /* SceneDelegate.swift */,
 				F36AEEE7245E69B30053F40A /* ViewController.swift */,
@@ -97,6 +102,15 @@
 				F36AEEFC245E69B70053F40A /* Info.plist */,
 			);
 			path = PokedexViperTests;
+			sourceTree = "<group>";
+		};
+		F36AEF05245E6FEC0053F40A /* Style Guide */ = {
+			isa = PBXGroup;
+			children = (
+				F36AEF06245E70150053F40A /* Typography.swift */,
+				F36AEF08245E721F0053F40A /* Colors.swift */,
+			);
+			path = "Style Guide";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F36AEEE8245E69B30053F40A /* ViewController.swift in Sources */,
+				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
+				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
