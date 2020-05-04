@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEE3245E69B30053F40A /* AppDelegate.swift */; };
 		F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEE5245E69B30053F40A /* SceneDelegate.swift */; };
-		F36AEEE8245E69B30053F40A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEE7245E69B30053F40A /* ViewController.swift */; };
+		F36AEEE8245E69B30053F40A /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEE7245E69B30053F40A /* HomeListView.swift */; };
 		F36AEEEB245E69B30053F40A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36AEEE9245E69B30053F40A /* Main.storyboard */; };
 		F36AEEED245E69B70053F40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36AEEEC245E69B70053F40A /* Assets.xcassets */; };
 		F36AEEF0245E69B70053F40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36AEEEE245E69B70053F40A /* LaunchScreen.storyboard */; };
 		F36AEEFB245E69B70053F40A /* PokedexViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEEFA245E69B70053F40A /* PokedexViperTests.swift */; };
 		F36AEF07245E70150053F40A /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEF06245E70150053F40A /* Typography.swift */; };
 		F36AEF09245E721F0053F40A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEF08245E721F0053F40A /* Colors.swift */; };
+		F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36AEF0C245F199A0053F40A /* HomeWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 		F36AEEE0245E69B30053F40A /* PokedexViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36AEEE3245E69B30053F40A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36AEEE5245E69B30053F40A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F36AEEE7245E69B30053F40A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F36AEEE7245E69B30053F40A /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		F36AEEEA245E69B30053F40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F36AEEEC245E69B70053F40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F36AEEEF245E69B70053F40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		F36AEEFC245E69B70053F40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36AEF06245E70150053F40A /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		F36AEF08245E721F0053F40A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F36AEF0C245F199A0053F40A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +85,10 @@
 		F36AEEE2245E69B30053F40A /* PokedexViper */ = {
 			isa = PBXGroup;
 			children = (
+				F36AEF0A245F19730053F40A /* Modules */,
 				F36AEF05245E6FEC0053F40A /* Style Guide */,
 				F36AEEE3245E69B30053F40A /* AppDelegate.swift */,
 				F36AEEE5245E69B30053F40A /* SceneDelegate.swift */,
-				F36AEEE7245E69B30053F40A /* ViewController.swift */,
 				F36AEEE9245E69B30053F40A /* Main.storyboard */,
 				F36AEEEC245E69B70053F40A /* Assets.xcassets */,
 				F36AEEEE245E69B70053F40A /* LaunchScreen.storyboard */,
@@ -111,6 +113,23 @@
 				F36AEF08245E721F0053F40A /* Colors.swift */,
 			);
 			path = "Style Guide";
+			sourceTree = "<group>";
+		};
+		F36AEF0A245F19730053F40A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F36AEF0B245F19800053F40A /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F36AEF0B245F19800053F40A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F36AEEE7245E69B30053F40A /* HomeListView.swift */,
+				F36AEF0C245F199A0053F40A /* HomeWireframe.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36AEEE8245E69B30053F40A /* ViewController.swift in Sources */,
+				F36AEEE8245E69B30053F40A /* HomeListView.swift in Sources */,
 				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
 				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
+				F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
