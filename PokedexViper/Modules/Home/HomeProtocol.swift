@@ -9,10 +9,16 @@
 import Foundation
 
 
+enum selectedHome {
+    case generation
+    case filter
+    case order
+}
 protocol HomePresenterInput {
     var finishPagination: Bool { get set }
     func viewDidLoad()
     func paginate()
+    func didTap(item: selectedHome)
     
 }
 protocol HomePresenterOutput: class {

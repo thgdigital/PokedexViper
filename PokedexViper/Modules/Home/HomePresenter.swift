@@ -9,6 +9,7 @@
 import Foundation
 
 class HomePresenter: HomePresenterInput {
+    
     var finishPagination: Bool = false
     
     var items: [HomeItem] = [HomeItem]()
@@ -36,7 +37,19 @@ class HomePresenter: HomePresenterInput {
            items = items.filter({ !($0 is HomeItemLoading) })
            return items
        }
+    
+    func didTap(item: selectedHome) {
+        switch item {
+        case .generation:
+            wiframe.showGenerations()
+        case .filter:
+            break
+        case .order:
+            break
+        }
+    }
 }
+
 extension HomePresenter: HomeInteractorOuput {
     
     func finish() {

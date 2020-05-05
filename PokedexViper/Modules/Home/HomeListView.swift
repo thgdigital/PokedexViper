@@ -75,15 +75,22 @@ class HomeListView: UIViewController {
         ])
         
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: #imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(sendTeste(_:))),
-            UIBarButtonItem(image: #imageLiteral(resourceName: "order"), style: .plain, target: self, action: #selector(sendTeste(_:))),
-            UIBarButtonItem(image: #imageLiteral(resourceName: "generatios"), style: .plain, target: self, action: #selector(sendTeste(_:))),
+            UIBarButtonItem(image: #imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(sendFilter(_:))),
+            UIBarButtonItem(image: #imageLiteral(resourceName: "order"), style: .plain, target: self, action: #selector(sendOrderBy(_:))),
+            UIBarButtonItem(image: #imageLiteral(resourceName: "generatios"), style: .plain, target: self, action: #selector(sendGeneration(_:))),
             
         ]
     }
     
-    @objc  func sendTeste(_ sender: Any?) {
-        
+    @objc  func sendGeneration(_ sender: Any?) {
+        presenter.didTap(item: .generation)
+    }
+    
+    @objc  func sendFilter(_ sender: Any?) {
+        presenter.didTap(item: .filter)
+    }
+    @objc  func sendOrderBy(_ sender: Any?) {
+        presenter.didTap(item: .order)
     }
     
     
