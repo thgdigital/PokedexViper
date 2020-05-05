@@ -37,18 +37,18 @@ extension UIColor {
     static var electricTypeBackground = UIColor(hex: "#F2CB55")
     static var fairyTypeBackground = UIColor(hex: "#EBA8C3")
     static var fightingTypeBackground = UIColor(hex: "#EB4971")
-    static var fireTypeBackground = UIColor(hex: "#FFA756")
+    static var fireTypeBackground = UIColor(red: 1, green: 0.655, blue: 0.337, alpha: 1)
     static var flyingTypeBackground = UIColor(hex: "#83A2E3")
     static var ghostTypeBackground = UIColor(hex: "#8571BE")
     static var grassTypeBackground = UIColor(red: 0.545, green: 0.745, blue: 0.541, alpha: 1)
     static var groundTypeBackground = UIColor(hex: "#F78551")
     static var iceTypeBackground = UIColor(hex: "#91D8DF")
-    static var normalTypeBackground = UIColor(hex: "#B5B9C4")
+    static var normalTypeBackground = UIColor(red: 0.709, green: 0.724, blue: 0.77, alpha: 1)
     static var poisonTypeBackground = UIColor(hex: "#9F6E97")
     static var psychicTypeBackground = UIColor(hex: "#FF6568")
     static var rockTypeBackground = UIColor(hex: "#D4C294")
     static var steelTypeBackground = UIColor(hex: "#4C91B2")
-    static var waterTypeBackground = UIColor(hex: "#58ABF6")
+    static var waterTypeBackground = UIColor(red: 0.345, green: 0.671, blue: 0.965, alpha: 1)
     
     static var textField =  UIColor(red: 0.95, green:  0.95, blue:  0.95, alpha: 1)
     static var textColor = UIColor(red: 0.09, green: 0.09, blue: 0.106, alpha: 1)
@@ -78,4 +78,70 @@ extension UIColor {
 
         return nil
     }
+    
+    static func backgroundColor(colorString: ColorString) -> UIColor {
+        switch colorString {
+        
+        case .bug:
+            return UIColor.bugTypeBackground
+        case .dark:
+            return UIColor.darkTypeBackground
+        case .dragon:
+            return UIColor.dragonTypeBackground ?? .white
+        case .electric:
+            return UIColor.electricTypeBackground ?? .white
+        case .fairy:
+            return UIColor.fairyTypeBackground ?? .white
+        case .fighting:
+            return UIColor.fightingTypeBackground ?? .white
+        case .fire:
+            return UIColor.fireTypeBackground
+        case .flying:
+            return UIColor.flyingTypeBackground ?? .white
+        case .ghost:
+            return UIColor.ghostTypeBackground ?? .white
+        case .grass:
+            return UIColor.grassTypeBackground 
+        case .ground:
+            return UIColor.groundTypeBackground ?? .white
+        case .ice:
+            return UIColor.iceTypeBackground ?? .white
+        case .normal:
+            return UIColor.normalTypeBackground 
+        case .poison:
+            return UIColor.poisonTypeBackground ?? .white
+        case .psychic:
+            return UIColor.psychicTypeBackground ?? .white
+        case .rock:
+            return UIColor.rockTypeBackground ?? .white
+        case .steel:
+            return UIColor.steelTypeBackground ?? .white
+        case .metal:
+            return UIColor.white
+        case .water:
+            return UIColor.waterTypeBackground
+        }
+    }
+}
+
+enum ColorString: String  {
+    case bug
+    case dark
+    case dragon
+    case electric
+    case fairy
+    case fighting
+    case fire
+    case flying
+    case ghost
+    case grass
+    case ground
+    case ice
+    case normal
+    case poison
+    case psychic
+    case rock
+    case steel
+    case metal
+    case water
 }

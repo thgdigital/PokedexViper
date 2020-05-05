@@ -11,7 +11,13 @@ import UIKit
 class HomeWireframe {
     
     static func make(window: UIWindow) -> HomeListView {
+        
+        let interactor = HomeInteractor(manager: PokemonManager())
+        let presenter = HomePresenter(interactor: interactor)
+        interactor.output = presenter
         let viewController = HomeListView()
+        viewController.presenter = presenter
+        presenter.output = viewController
         let navigation = UINavigationController(rootViewController: viewController)
         let navigationBar  = navigation.navigationBar
         navigationBar.setBackgroundImage(UIImage(), for: .default)

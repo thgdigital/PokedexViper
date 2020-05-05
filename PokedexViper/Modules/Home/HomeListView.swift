@@ -10,6 +10,10 @@ import UIKit
 
 class HomeListView: UIViewController {
     
+    var presenter: HomePresenterInput!
+    
+    var pokemons: [HomeItem] = []
+    
     let boxView: BoxView = {
         let viewBox = BoxView()
         viewBox.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +42,7 @@ class HomeListView: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         setupLayout()
+        presenter.viewDidLoad()
         
     }
     
@@ -81,14 +86,22 @@ class HomeListView: UIViewController {
     
 
 }
+extension HomeListView: HomePresenterOutput {
+    func result(pokemons: [HomeItem]) {
+        self.pokemons = pokemons
+        collectionView.reloadData()
+    }
+}
+
 extension HomeListView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return pokemons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as! HomeCell
+        cell.populate(item: pokemons[indexPath.row])
         return cell
     }
     

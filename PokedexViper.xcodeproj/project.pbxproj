@@ -24,6 +24,16 @@
 		F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */; };
 		F3CD7FAE24610DEB00ABB9C5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FAD24610DEB00ABB9C5 /* Helper.swift */; };
 		F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FAF24610E2700ABB9C5 /* ReusableIdentifier.swift */; };
+		F3CD7FB42461A09F00ABB9C5 /* PokemonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FB32461A09F00ABB9C5 /* PokemonManager.swift */; };
+		F3CD7FB62461A0B600ABB9C5 /* PokemonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FB52461A0B600ABB9C5 /* PokemonRouter.swift */; };
+		F3CD7FB82461A37300ABB9C5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FB72461A37300ABB9C5 /* HomeModel.swift */; };
+		F3CD7FBA2461A3B700ABB9C5 /* Kalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FB92461A3B700ABB9C5 /* Kalo.swift */; };
+		F3CD7FBE2461A59A00ABB9C5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FBD2461A59A00ABB9C5 /* HomeInteractor.swift */; };
+		F3CD7FC02461A5AC00ABB9C5 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FBF2461A5AC00ABB9C5 /* HomeProtocol.swift */; };
+		F3CD7FC22461A5BE00ABB9C5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC12461A5BE00ABB9C5 /* HomePresenter.swift */; };
+		F3CD7FC42461A7D500ABB9C5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */; };
+		F3CD7FC62461A98700ABB9C5 /* HomeEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */; };
+		F3CD7FC82461AB9F00ABB9C5 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +72,16 @@
 		F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		F3CD7FAD24610DEB00ABB9C5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F3CD7FAF24610E2700ABB9C5 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
+		F3CD7FB32461A09F00ABB9C5 /* PokemonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonManager.swift; sourceTree = "<group>"; };
+		F3CD7FB52461A0B600ABB9C5 /* PokemonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRouter.swift; sourceTree = "<group>"; };
+		F3CD7FB72461A37300ABB9C5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F3CD7FB92461A3B700ABB9C5 /* Kalo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalo.swift; sourceTree = "<group>"; };
+		F3CD7FBD2461A59A00ABB9C5 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		F3CD7FBF2461A5AC00ABB9C5 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		F3CD7FC12461A5BE00ABB9C5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntityMapper.swift; sourceTree = "<group>"; };
+		F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +147,7 @@
 		F36AEEE2245E69B30053F40A /* PokedexViper */ = {
 			isa = PBXGroup;
 			children = (
+				F3CD7FB12461A07A00ABB9C5 /* Common */,
 				F36AEF0A245F19730053F40A /* Modules */,
 				F36AEF05245E6FEC0053F40A /* Style Guide */,
 				F36AEEE3245E69B30053F40A /* AppDelegate.swift */,
@@ -170,13 +191,54 @@
 			children = (
 				F36AEEE7245E69B30053F40A /* HomeListView.swift */,
 				F36AEF0C245F199A0053F40A /* HomeWireframe.swift */,
-				F3CD7FA12460D21100ABB9C5 /* BoxView.swift */,
 				F3CD7FA92461075D00ABB9C5 /* HomeCell.swift */,
 				F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */,
+				F3CD7FBD2461A59A00ABB9C5 /* HomeInteractor.swift */,
+				F3CD7FBF2461A5AC00ABB9C5 /* HomeProtocol.swift */,
+				F3CD7FC12461A5BE00ABB9C5 /* HomePresenter.swift */,
+				F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */,
+				F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */,
+				F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F3CD7FB12461A07A00ABB9C5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F3CD7FBC2461A54C00ABB9C5 /* Helpers */,
+				F3CD7FBB2461A53C00ABB9C5 /* Views */,
+				F3CD7FB22461A08700ABB9C5 /* Manager */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3CD7FB22461A08700ABB9C5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F3CD7FB32461A09F00ABB9C5 /* PokemonManager.swift */,
+				F3CD7FB52461A0B600ABB9C5 /* PokemonRouter.swift */,
+				F3CD7FB72461A37300ABB9C5 /* HomeModel.swift */,
+				F3CD7FB92461A3B700ABB9C5 /* Kalo.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F3CD7FBB2461A53C00ABB9C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3CD7FA12460D21100ABB9C5 /* BoxView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3CD7FBC2461A54C00ABB9C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				F3CD7FAD24610DEB00ABB9C5 /* Helper.swift */,
 				F3CD7FAF24610E2700ABB9C5 /* ReusableIdentifier.swift */,
 			);
-			path = Home;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,13 +410,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3CD7FB62461A0B600ABB9C5 /* PokemonRouter.swift in Sources */,
+				F3CD7FC82461AB9F00ABB9C5 /* HomeItem.swift in Sources */,
 				F3CD7FA22460D21100ABB9C5 /* BoxView.swift in Sources */,
 				F36AEEE8245E69B30053F40A /* HomeListView.swift in Sources */,
+				F3CD7FBE2461A59A00ABB9C5 /* HomeInteractor.swift in Sources */,
+				F3CD7FC62461A98700ABB9C5 /* HomeEntityMapper.swift in Sources */,
 				F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */,
 				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
+				F3CD7FB42461A09F00ABB9C5 /* PokemonManager.swift in Sources */,
+				F3CD7FC42461A7D500ABB9C5 /* HomeEntity.swift in Sources */,
+				F3CD7FBA2461A3B700ABB9C5 /* Kalo.swift in Sources */,
+				F3CD7FC02461A5AC00ABB9C5 /* HomeProtocol.swift in Sources */,
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
 				F3CD7FAE24610DEB00ABB9C5 /* Helper.swift in Sources */,
+				F3CD7FC22461A5BE00ABB9C5 /* HomePresenter.swift in Sources */,
 				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
+				F3CD7FB82461A37300ABB9C5 /* HomeModel.swift in Sources */,
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
 				F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */,
 				F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */,

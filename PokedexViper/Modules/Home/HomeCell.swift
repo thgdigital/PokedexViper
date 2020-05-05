@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeCell: UICollectionViewCell {
+    
     @IBOutlet weak var boxView: UIView!
     @IBOutlet weak var typeFist: UIImageView!
     @IBOutlet weak var lastType: UIImageView!
@@ -29,5 +31,27 @@ class HomeCell: UICollectionViewCell {
         boxView.backgroundColor = UIColor.grassTypeBackground
         boxView.layer.cornerRadius = 10
         self.shadowHome()
+    }
+    
+    func populate(item: HomeItem) {
+        namaLabel.text = item.name
+        numberLabel.text = "#\(item.idPokemon)"
+        pokemomImage.sd_setImage(with: URL(string: item.image), completed: nil)
+        boxView.backgroundColor = item.background
+        
+        if item.type.count == 2 {
+            guard let fistName = item.type.first, let lastName = item.type.last else {
+                return
+            }
+            typeFist.image = UIImage(named: fistName.capitalized)
+            typeFist.isHidden = false
+            lastType.isHidden = false
+            lastType.image = UIImage(named: lastName.capitalized)
+            
+        } else {
+            typeFist.isHidden = false
+            typeFist.image = UIImage(named: item.type[0].capitalized)
+            lastType.isHidden = true
+        }
     }
 }
