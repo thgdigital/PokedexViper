@@ -21,7 +21,7 @@ extension UIColor {
     static var fireType = UIColor(hex: "#FD7D24")
     static var flyingType = UIColor(hex: "#748FC9")
     static var ghostType = UIColor(hex: "#556AAE")
-    static var grassType = UIColor(hex: "#62B957")
+    static var grassType = UIColor(red: 0.551, green: 0.7, blue: 0.187, alpha: 1)
     static var groundType = UIColor(hex: "#DD7748")
     static var iceType = UIColor(hex: "#61CEC0")
     static var normalType = UIColor(hex: "#9DA0AA")
@@ -31,8 +31,8 @@ extension UIColor {
     static var steelType = UIColor(hex: "#417D9A")
     static var waterType = UIColor(hex: "#4A90DA")
     
-    static var bugTypeBackground = UIColor(hex: "#8BD674")
-    static var darkTypeBackground = UIColor(hex: "#6F6E78")
+    static var bugTypeBackground = UIColor(red: 0.545, green: 0.839, blue: 0.455, alpha: 1)
+    static var darkTypeBackground = UIColor(red: 0.435, green: 0.43, blue: 0.47, alpha: 1)
     static var dragonTypeBackground = UIColor(hex: "#7383B9")
     static var electricTypeBackground = UIColor(hex: "#F2CB55")
     static var fairyTypeBackground = UIColor(hex: "#EBA8C3")
@@ -40,7 +40,7 @@ extension UIColor {
     static var fireTypeBackground = UIColor(hex: "#FFA756")
     static var flyingTypeBackground = UIColor(hex: "#83A2E3")
     static var ghostTypeBackground = UIColor(hex: "#8571BE")
-    static var grassTypeBackground = UIColor(hex: "#8BBE8A")
+    static var grassTypeBackground = UIColor(red: 0.545, green: 0.745, blue: 0.541, alpha: 1)
     static var groundTypeBackground = UIColor(hex: "#F78551")
     static var iceTypeBackground = UIColor(hex: "#91D8DF")
     static var normalTypeBackground = UIColor(hex: "#B5B9C4")
@@ -49,6 +49,9 @@ extension UIColor {
     static var rockTypeBackground = UIColor(hex: "#D4C294")
     static var steelTypeBackground = UIColor(hex: "#4C91B2")
     static var waterTypeBackground = UIColor(hex: "#58ABF6")
+    
+    static var textField =  UIColor(red: 0.95, green:  0.95, blue:  0.95, alpha: 1)
+    static var textColor = UIColor(red: 0.09, green: 0.09, blue: 0.106, alpha: 1)
     
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat

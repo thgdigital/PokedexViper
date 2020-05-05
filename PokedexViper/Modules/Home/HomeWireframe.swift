@@ -16,6 +16,7 @@ class HomeWireframe {
         let navigationBar  = navigation.navigationBar
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
+        navigationBar.tintColor = .black
         navigationBar.isTranslucent = true
         window.rootViewController = navigation
         window.makeKeyAndVisible()
