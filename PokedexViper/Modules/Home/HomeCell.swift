@@ -48,9 +48,9 @@ class HomeCell: UICollectionViewCell {
             lastType.isHidden = false
             lastType.image = UIImage(named: lastName.capitalized)
             
-        } else {
+        } else if item.type.count == 1{
             typeFist.isHidden = false
-//            typeFist.image = UIImage(named: item.type[0].capitalized)
+            typeFist.image = UIImage(named: item.type[0].capitalized)
             lastType.isHidden = true
         }
     }

@@ -49,6 +49,8 @@ class HomeListView: UIViewController {
     func setupLayout() {
         let nibName = UINib(nibName: "HomeCell", bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: HomeCell.identifier)
+        let nibNameLoading = UINib(nibName: "LoadingCell", bundle: nil)
+        collectionView.register(nibNameLoading, forCellWithReuseIdentifier: LoadingCell.identifier)
         guard let navigationBar = navigationController?.navigationBar else {
             return
         }
@@ -110,9 +112,15 @@ extension HomeListView: UICollectionViewDataSource, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as! HomeCell
-        cell.populate(item: pokemons[indexPath.row])
-        return cell
+        if pokemons[indexPath.row] is HomeItemLoading{
+                   let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LoadingCell.identifier, for: indexPath) as! LoadingCell
+            return cell
+        }else {
+             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifier, for: indexPath) as! HomeCell
+            cell.populate(item: pokemons[indexPath.row])
+            return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

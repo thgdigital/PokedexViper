@@ -34,6 +34,8 @@
 		F3CD7FC42461A7D500ABB9C5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */; };
 		F3CD7FC62461A98700ABB9C5 /* HomeEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */; };
 		F3CD7FC82461AB9F00ABB9C5 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */; };
+		F3CD7FCB2461C06900ABB9C5 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FC92461C06900ABB9C5 /* LoadingCell.swift */; };
+		F3CD7FCC2461C06900ABB9C5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FCA2461C06900ABB9C5 /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntityMapper.swift; sourceTree = "<group>"; };
 		F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		F3CD7FC92461C06900ABB9C5 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		F3CD7FCA2461C06900ABB9C5 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 				F3CD7FC32461A7D500ABB9C5 /* HomeEntity.swift */,
 				F3CD7FC52461A98700ABB9C5 /* HomeEntityMapper.swift */,
 				F3CD7FC72461AB9F00ABB9C5 /* HomeItem.swift */,
+				F3CD7FC92461C06900ABB9C5 /* LoadingCell.swift */,
+				F3CD7FCA2461C06900ABB9C5 /* LoadingCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				F36AEEF0245E69B70053F40A /* LaunchScreen.storyboard in Resources */,
 				F36AEEED245E69B70053F40A /* Assets.xcassets in Resources */,
 				F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */,
+				F3CD7FCC2461C06900ABB9C5 /* LoadingCell.xib in Resources */,
 				F36AEEEB245E69B30053F40A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +435,7 @@
 				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
 				F3CD7FB82461A37300ABB9C5 /* HomeModel.swift in Sources */,
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
+				F3CD7FCB2461C06900ABB9C5 /* LoadingCell.swift in Sources */,
 				F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */,
 				F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */,
 			);

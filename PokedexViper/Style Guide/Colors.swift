@@ -33,21 +33,21 @@ extension UIColor {
     
     static var bugTypeBackground = UIColor(red: 0.545, green: 0.839, blue: 0.455, alpha: 1)
     static var darkTypeBackground = UIColor(red: 0.435, green: 0.43, blue: 0.47, alpha: 1)
-    static var dragonTypeBackground = UIColor(hex: "#7383B9")
-    static var electricTypeBackground = UIColor(hex: "#F2CB55")
-    static var fairyTypeBackground = UIColor(hex: "#EBA8C3")
-    static var fightingTypeBackground = UIColor(hex: "#EB4971")
+    static var dragonTypeBackground = UIColor(hexString: "7383B9")
+    static var electricTypeBackground = UIColor(hexString: "F2CB55")
+    static var fairyTypeBackground = UIColor(hexString: "EBA8C3")
+    static var fightingTypeBackground = UIColor(hexString: "EB4971")
     static var fireTypeBackground = UIColor(red: 1, green: 0.655, blue: 0.337, alpha: 1)
-    static var flyingTypeBackground = UIColor(hex: "#83A2E3")
-    static var ghostTypeBackground = UIColor(hex: "#8571BE")
+    static var flyingTypeBackground = UIColor(hexString: "83A2E3")
+    static var ghostTypeBackground = UIColor(hexString: "8571BE")
     static var grassTypeBackground = UIColor(red: 0.545, green: 0.745, blue: 0.541, alpha: 1)
-    static var groundTypeBackground = UIColor(hex: "#F78551")
-    static var iceTypeBackground = UIColor(hex: "#91D8DF")
+    static var groundTypeBackground = UIColor(hexString: "F78551")
+    static var iceTypeBackground = UIColor(hexString: "91D8DF")
     static var normalTypeBackground = UIColor(red: 0.709, green: 0.724, blue: 0.77, alpha: 1)
-    static var poisonTypeBackground = UIColor(hex: "#9F6E97")
-    static var psychicTypeBackground = UIColor(hex: "#FF6568")
-    static var rockTypeBackground = UIColor(hex: "#D4C294")
-    static var steelTypeBackground = UIColor(hex: "#4C91B2")
+    static var poisonTypeBackground = UIColor(hexString: "9F6E97")
+    static var psychicTypeBackground = UIColor(hexString: "FF6568")
+    static var rockTypeBackground = UIColor(hexString: "D4C294")
+    static var steelTypeBackground = UIColor(hexString: "4C91B2")
     static var waterTypeBackground = UIColor(red: 0.345, green: 0.671, blue: 0.965, alpha: 1)
     
     static var textField =  UIColor(red: 0.95, green:  0.95, blue:  0.95, alpha: 1)
@@ -144,4 +144,34 @@ enum ColorString: String  {
     case steel
     case metal
     case water
+}
+
+extension UIColor {
+
+  var hexString: String {
+    var red: CGFloat = 0
+    var green: CGFloat = 0
+    var blue: CGFloat = 0
+
+    getRed(&red, green: &green, blue: &blue, alpha: nil)
+
+    return String(format: "#%02lX%02lX%02lX", lroundf(Float(red) * 255), lroundf(Float(green) * 255), lroundf(Float(blue) * 255))
+  }
+
+  convenience init?(hexString: String) {
+    let colorString = hexString.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "#", with: "").uppercased()
+
+    guard colorString.count == 6 else {
+      return nil
+    }
+
+    var rgbValue: UInt32 = 0
+    Scanner(string: colorString).scanHexInt32(&rgbValue)
+
+    self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+              green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+              blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+              alpha: 1)
+  }
+
 }
