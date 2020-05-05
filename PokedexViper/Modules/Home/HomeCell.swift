@@ -23,7 +23,7 @@ class HomeCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         numberLabel.text = "#001"
-        numberLabel.textColor = UIColor.textColor
+        numberLabel.textColor = UIColor.textNumber
         numberLabel.font = UIFont.pokemonNumber
         namaLabel.font = UIFont.pokemonName
         namaLabel.text = "Bulbasaur"

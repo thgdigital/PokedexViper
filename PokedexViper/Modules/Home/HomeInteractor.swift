@@ -70,9 +70,6 @@ class HomeInteractor: HomeInteractorInput {
                     switch result{
                     case .success(let homeModel):
                         let home = HomeEntityMapper.mappingHome(model: homeModel, kalos: self.kalos ?? [])
-                        guard let results = self.home?.results else {
-                            return
-                        }
                         self.home = home
                                             self.output?.fetched(paginate: home)
                     case .failure(let error):

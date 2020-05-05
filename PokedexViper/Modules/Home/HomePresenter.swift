@@ -17,8 +17,11 @@ class HomePresenter: HomePresenterInput {
     
     var interactor: HomeInteractorInput
     
-    init(interactor: HomeInteractorInput) {
+    var wiframe: HomeWireframe
+    
+    init(interactor: HomeInteractorInput, wiframe: HomeWireframe) {
         self.interactor = interactor
+        self.wiframe = wiframe
     }
     
     func viewDidLoad() {

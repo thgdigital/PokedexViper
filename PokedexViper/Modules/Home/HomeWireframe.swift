@@ -10,10 +10,12 @@ import UIKit
 
 class HomeWireframe {
     
-    static func make(window: UIWindow) -> HomeListView {
+    weak var navigationcontroller: UINavigationController?
+    
+    func make(window: UIWindow) -> HomeListView {
         
         let interactor = HomeInteractor(manager: PokemonManager())
-        let presenter = HomePresenter(interactor: interactor)
+        let presenter = HomePresenter(interactor: interactor, wiframe: self)
         interactor.output = presenter
         let viewController = HomeListView()
         viewController.presenter = presenter
