@@ -45,6 +45,8 @@
 		F3CD7FDB2461ECE300ABB9C5 /* GenerationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FDA2461ECE300ABB9C5 /* GenerationEntity.swift */; };
 		F3CD7FDD2461F12000ABB9C5 /* Generationitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FDC2461F12000ABB9C5 /* Generationitem.swift */; };
 		F3CD7FDF2461F28300ABB9C5 /* GenerationWiframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */; };
+		F3CD7FE2246210DA00ABB9C5 /* GenerationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */; };
+		F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		F3CD7FDA2461ECE300ABB9C5 /* GenerationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationEntity.swift; sourceTree = "<group>"; };
 		F3CD7FDC2461F12000ABB9C5 /* Generationitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generationitem.swift; sourceTree = "<group>"; };
 		F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationWiframe.swift; sourceTree = "<group>"; };
+		F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationHeader.swift; sourceTree = "<group>"; };
+		F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,8 @@
 				F3CD7FDA2461ECE300ABB9C5 /* GenerationEntity.swift */,
 				F3CD7FDC2461F12000ABB9C5 /* Generationitem.swift */,
 				F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */,
+				F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */,
+				F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */,
 				F3CD7FD72461E03C00ABB9C5 /* GenerationCell.xib in Resources */,
 				F3CD7FCC2461C06900ABB9C5 /* LoadingCell.xib in Resources */,
+				F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */,
 				F36AEEEB245E69B30053F40A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +466,7 @@
 				F36AEEE8245E69B30053F40A /* HomeListView.swift in Sources */,
 				F3CD7FBE2461A59A00ABB9C5 /* HomeInteractor.swift in Sources */,
 				F3CD7FC62461A98700ABB9C5 /* HomeEntityMapper.swift in Sources */,
+				F3CD7FE2246210DA00ABB9C5 /* GenerationHeader.swift in Sources */,
 				F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */,
 				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
 				F3CD7FD12461DF7A00ABB9C5 /* GenerationProtocol.swift in Sources */,

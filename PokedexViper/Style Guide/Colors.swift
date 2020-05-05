@@ -54,6 +54,7 @@ extension UIColor {
     static var textColor = UIColor(red: 0.09, green: 0.09, blue: 0.106, alpha: 1)
     static var textNumber = UIColor(red: 0.09, green: 0.09, blue: 0.106, alpha: 0.6)
     static var backgroundGenerations = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+    static var backgroundGenerationsSelected = UIColor(red: 0.917, green: 0.363, blue: 0.376, alpha: 1)
     static var textGenerations =  UIColor(red: 0.455, green: 0.455, blue: 0.463, alpha: 1)
     
     public convenience init?(hex: String) {

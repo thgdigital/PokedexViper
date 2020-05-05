@@ -9,6 +9,13 @@
 import UIKit
 
 class GenerationCell: UICollectionViewCell {
+    
+    override var isSelected: Bool {
+        didSet {
+            backgroundColor = isSelected ? UIColor.backgroundGenerationsSelected: UIColor.backgroundGenerations
+            nameLabel.textColor = isSelected ? .white : UIColor.textGenerations
+        }
+    }
 
     @IBOutlet weak var pokemon1Image: UIImageView!
     @IBOutlet weak var pokemon2Image: UIImageView!

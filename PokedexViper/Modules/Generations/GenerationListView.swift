@@ -28,6 +28,10 @@ class GenerationListView: UICollectionViewController {
         collectionView.dataSource = self
         let nibName = UINib(nibName: "GenerationCell", bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: GenerationCell.identifier)
+        
+        collectionView.register(UINib(nibName: String(describing: GenerationHeader.self), bundle: nil),
+        forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+        withReuseIdentifier: GenerationHeader.identifier)
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
           return
         }
@@ -35,6 +39,7 @@ class GenerationListView: UICollectionViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 2)
         layout.minimumInteritemSpacing = .zero
         layout.minimumLineSpacing = 4.0
+        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width, height: 150)
     }
 
 
@@ -52,6 +57,13 @@ class GenerationListView: UICollectionViewController {
         // Configure the cell
         cell.populate(item: items[indexPath.row])
         return cell
+    }
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: GenerationHeader.identifier, for: indexPath) as? GenerationHeader else {
+                   return UICollectionReusableView()
+               }
+               
+               return header
     }
 }
 extension GenerationListView: GenerationPresenterOutput {

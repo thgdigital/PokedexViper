@@ -39,7 +39,7 @@ class HomeWireframe {
         
         let controller = GenerationWiframe().makeScreen()
 
-        let sheetController = SheetViewController(controller: controller, sizes: [.fixed(600), .fullScreen])
+        let sheetController = SheetViewController(controller: controller, sizes: [.fixed(850), .fullScreen])
 
         // Adjust how the bottom safe area is handled on iPhone X screens
         sheetController.blurBottomSafeArea = false
