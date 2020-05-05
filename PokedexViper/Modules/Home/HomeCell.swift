@@ -50,7 +50,7 @@ class HomeCell: UICollectionViewCell {
             
         } else {
             typeFist.isHidden = false
-            typeFist.image = UIImage(named: item.type[0].capitalized)
+//            typeFist.image = UIImage(named: item.type[0].capitalized)
             lastType.isHidden = true
         }
     }

@@ -27,16 +27,16 @@ class HomeListView: UIViewController {
         return imageView
     }()
     
-   lazy var collectionView : UICollectionView = {
-          let layout  = UICollectionViewFlowLayout()
-          let colletion  = UICollectionView(frame: .zero, collectionViewLayout: layout)
-          colletion.translatesAutoresizingMaskIntoConstraints = false
-          colletion.backgroundColor = .white
-         colletion.delegate = self
-          colletion.dataSource = self
+    lazy var collectionView : UICollectionView = {
+        let layout  = UICollectionViewFlowLayout()
+        let colletion  = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        colletion.translatesAutoresizingMaskIntoConstraints = false
+        colletion.backgroundColor = .white
+        colletion.delegate = self
+        colletion.dataSource = self
         layout.sectionInset.top = 40
-          return colletion
-      }()
+        return colletion
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class HomeListView: UIViewController {
     }
     
     func setupLayout() {
-       let nibName = UINib(nibName: "HomeCell", bundle: nil)
+        let nibName = UINib(nibName: "HomeCell", bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: HomeCell.identifier)
         guard let navigationBar = navigationController?.navigationBar else {
             return
@@ -84,9 +84,19 @@ class HomeListView: UIViewController {
         
     }
     
-
+    
 }
 extension HomeListView: HomePresenterOutput {
+    func result(paginate: [HomeItem]) {
+        self.pokemons = paginate
+        collectionView.reloadItemsInSection(sectionIndex: 0, newCount: self.pokemons.count) {
+            let indexPathsForVisibleItems = self.collectionView.indexPathsForVisibleItems
+            if !self.presenter.finishPagination {
+                self.collectionView.reloadItems(at: indexPathsForVisibleItems)
+            }
+        }
+    }
+    
     func result(pokemons: [HomeItem]) {
         self.pokemons = pokemons
         collectionView.reloadData()
@@ -109,4 +119,9 @@ extension HomeListView: UICollectionViewDataSource, UICollectionViewDelegate, UI
         return CGSize(width: view.bounds.width - 40, height: 135)
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if pokemons[indexPath.row] is HomeItemLoading, !presenter.finishPagination {
+            presenter.paginate()
+        }
+    }
 }

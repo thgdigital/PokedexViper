@@ -36,4 +36,9 @@ class HomeItem: NSObject {
         }
         return UIColor.backgroundColor(colorString: colorString)
     }
+    
+    
+}
+class HomeItemLoading: HomeItem {
+    
 }
