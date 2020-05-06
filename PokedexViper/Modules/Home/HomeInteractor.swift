@@ -35,6 +35,27 @@ class HomeInteractor: HomeInteractorInput {
         }
     }
     
+    func order(by: OrderBySelected) {
+        var results = home?.results
+        switch by {
+        case .smallestNumber:
+           results = home?.results.map({ $0}).sorted(by: { $0.idPokemon < $1.idPokemon})
+        case .highestNumber:
+            results = home?.results.map({ $0 }).sorted(by: { $0.idPokemon > $1.idPokemon})
+        case .orderAZ:
+            results = home?.results.map({ $0}).sorted(by: { $0.name < $1.name})
+        case .orderZA:
+            results = home?.results.map({ $0}).sorted(by: { $0.name > $1.name})
+        }
+        self.home?.results = results ?? []
+        
+        guard let homeOrderBy = self.home else {
+            return
+        }
+        
+        output?.fetched(homeEntity: homeOrderBy)
+    }
+    
     func generation(pokemons: [GenerationPokemonEntity]) {
         if let kalos = self.kalos {
            let home =  HomeEntityMapper.generations(pokemons: pokemons, kalos: kalos)

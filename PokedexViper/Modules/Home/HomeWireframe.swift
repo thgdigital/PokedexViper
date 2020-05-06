@@ -71,7 +71,7 @@ class HomeWireframe {
 extension  HomeWireframe: GenerationWiframeDelegate, OrderByWiframeDelegate {
     func didSelected(type: OrderBySelected) {
         sheetController?.closeSheet(completion: {
-            print(type)
+            self.viewController?.presenter.didTap(by: type)
         })
     }
     

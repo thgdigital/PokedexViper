@@ -42,6 +42,10 @@ class HomePresenter: HomePresenterInput {
         interactor.generation(pokemons: pokemos)
     }
     
+    func didTap(by: OrderBySelected) {
+        interactor.order(by: by)
+    }
+    
     func didTap(item: selectedHome) {
         switch item {
         case .generation:

@@ -20,6 +20,7 @@ protocol HomePresenterInput {
     func paginate()
     func didTap(item: selectedHome)
     func updatePokemon(pokemos: [GenerationPokemonEntity])
+    func didTap(by: OrderBySelected)
     
 }
 protocol HomePresenterOutput: class {
@@ -33,6 +34,7 @@ protocol HomeInteractorInput {
     func updateView()
     func paginate()
     func generation(pokemons: [GenerationPokemonEntity])
+    func order(by: OrderBySelected)
 }
 
 protocol HomeInteractorOuput: class {
