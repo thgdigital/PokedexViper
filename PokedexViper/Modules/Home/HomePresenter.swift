@@ -34,9 +34,13 @@ class HomePresenter: HomePresenterInput {
     }
     
     func filterLoading() -> [HomeItem] {
-           items = items.filter({ !($0 is HomeItemLoading) })
-           return items
-       }
+        items = items.filter({ !($0 is HomeItemLoading) })
+        return items
+    }
+    
+    func updatePokemon(pokemos: [GenerationPokemonEntity]) {
+        interactor.generation(pokemons: pokemos)
+    }
     
     func didTap(item: selectedHome) {
         switch item {
@@ -56,20 +60,24 @@ extension HomePresenter: HomeInteractorOuput {
         finishPagination = true
     }
     
-    
     func fetched(paginate: HomeEntity) {
         items = filterLoading()
         items.append(contentsOf: paginate.results.map({ HomeItem.mapping(pokemonModel: $0) }))
         
-         if let homeCount = self.interactor.home?.count, (homeCount % items.count) != 0 {
+        if let homeCount = self.interactor.home?.count, (homeCount % items.count) != 0 {
             let appendLoading = HomeItemLoading()
             items.append(appendLoading)
         }
         output?.result(pokemons: items)
     }
     
+    func fetched(generactions: HomeEntity) {
+        items = generactions.results.map({ HomeItem.mapping(pokemonModel: $0) })
+        output?.result(pokemons: items)
+    }
+    
     func fetched(homeEntity: HomeEntity) {
-         items = homeEntity.results.map({ HomeItem.mapping(pokemonModel: $0) })
+        items = homeEntity.results.map({ HomeItem.mapping(pokemonModel: $0) })
         items.append(HomeItemLoading())
         output?.result(pokemons: items)
     }

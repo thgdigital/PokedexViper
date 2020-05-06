@@ -12,12 +12,11 @@ import FittedSheets
 class HomeWireframe {
     
     var navigationcontroller: UINavigationController?
-    
+    var sheetController:SheetViewController?
     var viewController: HomeListView?
+    let interactor = HomeInteractor(manager: PokemonManager())
     
     func make(window: UIWindow) -> HomeListView {
-        
-        let interactor = HomeInteractor(manager: PokemonManager())
         let presenter = HomePresenter(interactor: interactor, wiframe: self)
         interactor.output = presenter
         let viewController = HomeListView()
@@ -36,11 +35,14 @@ class HomeWireframe {
     }
     
     func showGenerations() {
-        
-        let controller = GenerationWiframe().makeScreen()
-
-        let sheetController = SheetViewController(controller: controller, sizes: [.fixed(850), .fullScreen])
-
+        let wireframe = GenerationWiframe()
+        wireframe.delegate = self
+        sheetController(viewController: wireframe.makeScreen())
+    }
+    
+    fileprivate func sheetController(viewController: UIViewController)  {
+        let sheetController = SheetViewController(controller: viewController, sizes: [.fixed(850), .fullScreen])
+        self.sheetController = sheetController
         // Adjust how the bottom safe area is handled on iPhone X screens
         sheetController.blurBottomSafeArea = false
         sheetController.adjustForBottomSafeArea = true
@@ -56,11 +58,15 @@ class HomeWireframe {
 
         // Extend the background behind the pull bar instead of having it transparent
         sheetController.extendBackgroundBehindHandle = true
-
-        // Change the overlay color
-
-        // Change the handle color
-
-        viewController?.present(sheetController, animated: false, completion: nil)
+        
+        self.viewController?.present(sheetController, animated: false, completion: nil)
+    }
+}
+extension  HomeWireframe: GenerationWiframeDelegate {
+    
+    func result(pokemons: [GenerationPokemonEntity]) {
+        sheetController?.closeSheet(completion: {
+            self.viewController?.presenter.updatePokemon(pokemos: pokemons)
+        })
     }
 }

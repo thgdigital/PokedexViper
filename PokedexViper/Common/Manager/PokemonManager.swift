@@ -10,6 +10,8 @@ import Alamofire
 
 class PokemonManager: NSObject {
     
+    static var shared: PokemonManager = PokemonManager()
+    
     @discardableResult
     private func performRequest(route: PokemonRouter, completion: @escaping (AFDataResponse<Any>) -> Void) -> DataRequest {
         return AF.request(route).validate().responseJSON {response in
@@ -48,6 +50,22 @@ class PokemonManager: NSObject {
             }
         }
     }
+    
+    func generation(idGeneration: String, completionHandler: @escaping  (Result<GeneractionModel, AFError>)-> Void) {
+        performRequest(route: .generation(id: idGeneration) ) { response in
+               switch response.result {
+                   
+               case .success:
+                   
+                   guard let data = response.data, let homeModel: GeneractionModel = self.decodeParse(jsonData: data) else {
+                       return
+                   }
+                   completionHandler(.success(homeModel))
+               case .failure(let error):
+                   completionHandler(.failure(error))
+               }
+           }
+       }
     
     func kalosPokemon(completionHandler: @escaping  (Result<Kalos, AFError>)-> Void){
         performRequest(route: .kalos) { response in

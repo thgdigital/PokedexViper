@@ -47,6 +47,8 @@
 		F3CD7FDF2461F28300ABB9C5 /* GenerationWiframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */; };
 		F3CD7FE2246210DA00ABB9C5 /* GenerationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */; };
 		F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */; };
+		F3CD7FE524621EDF00ABB9C5 /* GeneractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE424621EDF00ABB9C5 /* GeneractionModel.swift */; };
+		F3CD7FE7246223D600ABB9C5 /* GenerationPokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationWiframe.swift; sourceTree = "<group>"; };
 		F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationHeader.swift; sourceTree = "<group>"; };
 		F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationHeader.xib; sourceTree = "<group>"; };
+		F3CD7FE424621EDF00ABB9C5 /* GeneractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneractionModel.swift; sourceTree = "<group>"; };
+		F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationPokemonEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,7 @@
 				F3CD7FB52461A0B600ABB9C5 /* PokemonRouter.swift */,
 				F3CD7FB72461A37300ABB9C5 /* HomeModel.swift */,
 				F3CD7FB92461A3B700ABB9C5 /* Kalo.swift */,
+				F3CD7FE424621EDF00ABB9C5 /* GeneractionModel.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -273,17 +278,18 @@
 		F3CD7FCD2461DF1F00ABB9C5 /* Generations */ = {
 			isa = PBXGroup;
 			children = (
-				F3CD7FCE2461DF4700ABB9C5 /* GenerationListView.swift */,
-				F3CD7FD02461DF7A00ABB9C5 /* GenerationProtocol.swift */,
-				F3CD7FD22461DFAA00ABB9C5 /* GenerationPresenter.swift */,
 				F3CD7FD42461E03C00ABB9C5 /* GenerationCell.swift */,
 				F3CD7FD52461E03C00ABB9C5 /* GenerationCell.xib */,
-				F3CD7FD82461ECB900ABB9C5 /* GenerationInteractor.swift */,
 				F3CD7FDA2461ECE300ABB9C5 /* GenerationEntity.swift */,
-				F3CD7FDC2461F12000ABB9C5 /* Generationitem.swift */,
-				F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */,
 				F3CD7FE0246210DA00ABB9C5 /* GenerationHeader.swift */,
 				F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */,
+				F3CD7FD82461ECB900ABB9C5 /* GenerationInteractor.swift */,
+				F3CD7FDC2461F12000ABB9C5 /* Generationitem.swift */,
+				F3CD7FCE2461DF4700ABB9C5 /* GenerationListView.swift */,
+				F3CD7FD22461DFAA00ABB9C5 /* GenerationPresenter.swift */,
+				F3CD7FD02461DF7A00ABB9C5 /* GenerationProtocol.swift */,
+				F3CD7FDE2461F28300ABB9C5 /* GenerationWiframe.swift */,
+				F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
 				F3CD7FAE24610DEB00ABB9C5 /* Helper.swift in Sources */,
 				F3CD7FCF2461DF4700ABB9C5 /* GenerationListView.swift in Sources */,
+				F3CD7FE524621EDF00ABB9C5 /* GeneractionModel.swift in Sources */,
 				F3CD7FD32461DFAA00ABB9C5 /* GenerationPresenter.swift in Sources */,
 				F3CD7FC22461A5BE00ABB9C5 /* HomePresenter.swift in Sources */,
 				F3CD7FDD2461F12000ABB9C5 /* Generationitem.swift in Sources */,
@@ -485,6 +492,7 @@
 				F3CD7FB82461A37300ABB9C5 /* HomeModel.swift in Sources */,
 				F3CD7FDB2461ECE300ABB9C5 /* GenerationEntity.swift in Sources */,
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
+				F3CD7FE7246223D600ABB9C5 /* GenerationPokemonEntity.swift in Sources */,
 				F3CD7FCB2461C06900ABB9C5 /* LoadingCell.swift in Sources */,
 				F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */,
 				F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */,

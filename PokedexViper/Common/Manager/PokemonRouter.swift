@@ -15,6 +15,7 @@ enum PokemonRouter: URLRequestConvertible {
     case paginate(parameters: [String: String])
     case evolution(idPokemon: String)
     case typePokemon(id: String)
+    case generation(id: String)
     case kalos
     
     static let baseURLString = "https://pokeapi.co/api/v2"
@@ -22,7 +23,7 @@ enum PokemonRouter: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case .getPokemos, .readPokemon, .paginate, .evolution, .typePokemon, .kalos:
+        case .getPokemos, .readPokemon, .paginate, .evolution, .typePokemon, .kalos, .generation:
             return .get
         }
     }
@@ -41,6 +42,8 @@ enum PokemonRouter: URLRequestConvertible {
             return "/type/\(idPokemon)"
         case .kalos:
             return "/kalos"
+        case .generation(let idPokemon):
+            return "/generation/\(idPokemon)"
         }
     }
     

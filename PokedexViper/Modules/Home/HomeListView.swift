@@ -105,6 +105,10 @@ extension HomeListView: HomePresenterOutput {
             }
         }
     }
+    func result(generactions: [HomeItem]) {
+        self.pokemons = generactions
+        collectionView.reloadData()
+    }
     
     func result(pokemons: [HomeItem]) {
         self.pokemons = pokemons

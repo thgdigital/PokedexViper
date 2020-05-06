@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class GenerationListView: UICollectionViewController {
     
     var presenter: GenerationPresenterInput!
@@ -41,13 +43,8 @@ class GenerationListView: UICollectionViewController {
         layout.minimumLineSpacing = 4.0
         layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width, height: 150)
     }
-
-
-    // MARK: UICollectionViewDataSource
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return items.count
     }
 
@@ -64,6 +61,10 @@ class GenerationListView: UICollectionViewController {
                }
                
                return header
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelected(index: indexPath.row)
     }
 }
 extension GenerationListView: GenerationPresenterOutput {

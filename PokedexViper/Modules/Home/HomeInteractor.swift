@@ -35,6 +35,14 @@ class HomeInteractor: HomeInteractorInput {
         }
     }
     
+    func generation(pokemons: [GenerationPokemonEntity]) {
+        if let kalos = self.kalos {
+           let home =  HomeEntityMapper.generations(pokemons: pokemons, kalos: kalos)
+            self.home = home
+            self.output?.fetched(generactions: home)
+        }
+    }
+    
     fileprivate func fetchKalos(homeModel: HomeModel){
         manager.kalosPokemon { (result) in
             switch result {

@@ -16,5 +16,4 @@ class GenerationEntity: NSObject {
         self.name = name
         self.generations = generations
     }
-    
 }

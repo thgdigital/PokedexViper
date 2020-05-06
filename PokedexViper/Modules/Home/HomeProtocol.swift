@@ -19,21 +19,25 @@ protocol HomePresenterInput {
     func viewDidLoad()
     func paginate()
     func didTap(item: selectedHome)
+    func updatePokemon(pokemos: [GenerationPokemonEntity])
     
 }
 protocol HomePresenterOutput: class {
     func result(pokemons: [HomeItem])
     func result(paginate: [HomeItem])
+    func result(generactions: [HomeItem])
 }
 
 protocol HomeInteractorInput {
     var home: HomeEntity? { get set }
     func updateView()
     func paginate()
+    func generation(pokemons: [GenerationPokemonEntity])
 }
 
 protocol HomeInteractorOuput: class {
     func fetched(homeEntity: HomeEntity)
     func fetched(paginate: HomeEntity)
+    func fetched(generactions: HomeEntity)
     func finish()
 }

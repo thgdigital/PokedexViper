@@ -9,7 +9,26 @@
 import Foundation
 
 class GenerationInteractor: GenerationInteractorInput {
+    
     weak var output: GenerationInteractorOuput?
+    
+    var manager: PokemonManager
+    
+    init(manager: PokemonManager) {
+        self.manager = manager
+    }
+    
+    func didSelected(index: Int) {
+        manager.generation(idGeneration: "\(index)") { (result) in
+            switch result {
+            case .success(let generation):
+                let pokemons = generation.pokemonSpecies.map({ GenerationPokemonEntity(model: $0)})
+                self.output?.result(generations: pokemons)
+            case .failure(let error):
+                dump(error)
+            }
+        }
+    }
     
     func updateView() {
         let generations = [

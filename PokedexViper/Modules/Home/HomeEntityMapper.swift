@@ -22,6 +22,24 @@ class HomeEntityMapper {
         return entity
     }
     
+    static func generations(pokemons: [GenerationPokemonEntity], kalos: Kalos) -> HomeEntity {
+        let entity = HomeEntity()
+        entity.results = pokemons.map({ mappingGenerationsPokemons(pokemon: $0, kalos: kalos)}).sorted(by: { $0.idPokemon < $1.idPokemon })
+        return entity
+    }
+    
+    
+    static func mappingGenerationsPokemons(pokemon: GenerationPokemonEntity, kalos: Kalos) -> PokemonHomeEntity {
+        let kalo = kalos.first(where: { $0.slug == pokemon.name })
+        let entity = PokemonHomeEntity()
+        entity.idPokemon = kalo?.number ?? ""
+        entity.name = pokemon.name
+        entity.url = pokemon.url
+        entity.image = kalo?.thumbnailImage ?? ""
+        entity.type = kalo?.type.map({ $0.rawValue }) ?? []
+        
+        return entity
+    }
     
     static func mappingImage(index: Int) -> String {
         let idPokemon = index + lastIndex + 1
