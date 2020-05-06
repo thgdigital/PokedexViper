@@ -46,6 +46,11 @@ class HomeWireframe {
         sheetController(viewController: wiframe.makeScreen())
     }
     
+    func showFilter() {
+        let wiframe = FilterWireframe()
+        sheetController(viewController: wiframe.makeScreen())
+    }
+    
     fileprivate func sheetController(viewController: UIViewController)  {
         let sheetController = SheetViewController(controller: viewController, sizes: [.fixed(850), .fullScreen])
         self.sheetController = sheetController

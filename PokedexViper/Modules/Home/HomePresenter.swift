@@ -51,7 +51,7 @@ class HomePresenter: HomePresenterInput {
         case .generation:
             wiframe.showGenerations()
         case .filter:
-            break
+            wiframe.showFilter()
         case .order:
             wiframe.showSort()
             break
