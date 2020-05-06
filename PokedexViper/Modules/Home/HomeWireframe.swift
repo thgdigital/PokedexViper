@@ -40,6 +40,12 @@ class HomeWireframe {
         sheetController(viewController: wireframe.makeScreen())
     }
     
+    func showSort(){
+        let wiframe = OrderByWiframe()
+        wiframe.delegate = self
+        sheetController(viewController: wiframe.makeScreen())
+    }
+    
     fileprivate func sheetController(viewController: UIViewController)  {
         let sheetController = SheetViewController(controller: viewController, sizes: [.fixed(850), .fullScreen])
         self.sheetController = sheetController
@@ -62,7 +68,12 @@ class HomeWireframe {
         self.viewController?.present(sheetController, animated: false, completion: nil)
     }
 }
-extension  HomeWireframe: GenerationWiframeDelegate {
+extension  HomeWireframe: GenerationWiframeDelegate, OrderByWiframeDelegate {
+    func didSelected(type: OrderBySelected) {
+        sheetController?.closeSheet(completion: {
+            print(type)
+        })
+    }
     
     func result(pokemons: [GenerationPokemonEntity]) {
         sheetController?.closeSheet(completion: {

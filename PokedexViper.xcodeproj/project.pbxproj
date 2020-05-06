@@ -49,6 +49,11 @@
 		F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */; };
 		F3CD7FE524621EDF00ABB9C5 /* GeneractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE424621EDF00ABB9C5 /* GeneractionModel.swift */; };
 		F3CD7FE7246223D600ABB9C5 /* GenerationPokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */; };
+		F3CD7FEA24625E0800ABB9C5 /* OrderByListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FE924625E0800ABB9C5 /* OrderByListView.swift */; };
+		F3CD7FEC2462FC4800ABB9C5 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FEB2462FC4800ABB9C5 /* OrderButton.swift */; };
+		F3CD7FEE246306B700ABB9C5 /* OrderByWiframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FED246306B700ABB9C5 /* OrderByWiframe.swift */; };
+		F3CD7FF02463096000ABB9C5 /* OrderByPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FEF2463096000ABB9C5 /* OrderByPresenter.swift */; };
+		F3CD7FF22463097600ABB9C5 /* OrderByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FF12463097600ABB9C5 /* OrderByProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,11 @@
 		F3CD7FE1246210DA00ABB9C5 /* GenerationHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationHeader.xib; sourceTree = "<group>"; };
 		F3CD7FE424621EDF00ABB9C5 /* GeneractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneractionModel.swift; sourceTree = "<group>"; };
 		F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationPokemonEntity.swift; sourceTree = "<group>"; };
+		F3CD7FE924625E0800ABB9C5 /* OrderByListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByListView.swift; sourceTree = "<group>"; };
+		F3CD7FEB2462FC4800ABB9C5 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
+		F3CD7FED246306B700ABB9C5 /* OrderByWiframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByWiframe.swift; sourceTree = "<group>"; };
+		F3CD7FEF2463096000ABB9C5 /* OrderByPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByPresenter.swift; sourceTree = "<group>"; };
+		F3CD7FF12463097600ABB9C5 /* OrderByProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderByProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +221,7 @@
 		F36AEF0A245F19730053F40A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F3CD7FE824625DD300ABB9C5 /* OrderBy */,
 				F3CD7FCD2461DF1F00ABB9C5 /* Generations */,
 				F36AEF0B245F19800053F40A /* Home */,
 			);
@@ -262,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CD7FA12460D21100ABB9C5 /* BoxView.swift */,
+				F3CD7FEB2462FC4800ABB9C5 /* OrderButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +304,17 @@
 				F3CD7FE6246223D600ABB9C5 /* GenerationPokemonEntity.swift */,
 			);
 			path = Generations;
+			sourceTree = "<group>";
+		};
+		F3CD7FE824625DD300ABB9C5 /* OrderBy */ = {
+			isa = PBXGroup;
+			children = (
+				F3CD7FE924625E0800ABB9C5 /* OrderByListView.swift */,
+				F3CD7FED246306B700ABB9C5 /* OrderByWiframe.swift */,
+				F3CD7FEF2463096000ABB9C5 /* OrderByPresenter.swift */,
+				F3CD7FF12463097600ABB9C5 /* OrderByProtocol.swift */,
+			);
+			path = OrderBy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +495,7 @@
 				F36AEEE8245E69B30053F40A /* HomeListView.swift in Sources */,
 				F3CD7FBE2461A59A00ABB9C5 /* HomeInteractor.swift in Sources */,
 				F3CD7FC62461A98700ABB9C5 /* HomeEntityMapper.swift in Sources */,
+				F3CD7FEC2462FC4800ABB9C5 /* OrderButton.swift in Sources */,
 				F3CD7FE2246210DA00ABB9C5 /* GenerationHeader.swift in Sources */,
 				F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */,
 				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
@@ -479,12 +503,15 @@
 				F3CD7FDF2461F28300ABB9C5 /* GenerationWiframe.swift in Sources */,
 				F3CD7FB42461A09F00ABB9C5 /* PokemonManager.swift in Sources */,
 				F3CD7FC42461A7D500ABB9C5 /* HomeEntity.swift in Sources */,
+				F3CD7FF22463097600ABB9C5 /* OrderByProtocol.swift in Sources */,
 				F3CD7FBA2461A3B700ABB9C5 /* Kalo.swift in Sources */,
 				F3CD7FC02461A5AC00ABB9C5 /* HomeProtocol.swift in Sources */,
+				F3CD7FF02463096000ABB9C5 /* OrderByPresenter.swift in Sources */,
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
 				F3CD7FAE24610DEB00ABB9C5 /* Helper.swift in Sources */,
 				F3CD7FCF2461DF4700ABB9C5 /* GenerationListView.swift in Sources */,
 				F3CD7FE524621EDF00ABB9C5 /* GeneractionModel.swift in Sources */,
+				F3CD7FEE246306B700ABB9C5 /* OrderByWiframe.swift in Sources */,
 				F3CD7FD32461DFAA00ABB9C5 /* GenerationPresenter.swift in Sources */,
 				F3CD7FC22461A5BE00ABB9C5 /* HomePresenter.swift in Sources */,
 				F3CD7FDD2461F12000ABB9C5 /* Generationitem.swift in Sources */,
@@ -498,6 +525,7 @@
 				F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */,
 				F3CD7FD92461ECB900ABB9C5 /* GenerationInteractor.swift in Sources */,
 				F3CD7FD62461E03C00ABB9C5 /* GenerationCell.swift in Sources */,
+				F3CD7FEA24625E0800ABB9C5 /* OrderByListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

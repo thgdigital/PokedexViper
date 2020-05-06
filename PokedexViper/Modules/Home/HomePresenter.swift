@@ -49,6 +49,7 @@ class HomePresenter: HomePresenterInput {
         case .filter:
             break
         case .order:
+            wiframe.showSort()
             break
         }
     }
