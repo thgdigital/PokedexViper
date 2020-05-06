@@ -24,7 +24,6 @@ class GenerationPresenter: GenerationPresenterInput {
     
     func didSelected(index: Int) {
         interactor.didSelected(index: (index + 1))
-      print("Geração selecionada: \(index + 1)")
     }
 }
 extension GenerationPresenter: GenerationInteractorOuput {

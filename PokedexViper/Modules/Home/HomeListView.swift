@@ -17,6 +17,7 @@ class HomeListView: UIViewController {
     let boxView: BoxView = {
         let viewBox = BoxView()
         viewBox.translatesAutoresizingMaskIntoConstraints = false
+        viewBox.isUserInteractionEnabled = true
         return viewBox
     }()
     
@@ -51,23 +52,18 @@ class HomeListView: UIViewController {
         collectionView.register(nibName, forCellWithReuseIdentifier: HomeCell.identifier)
         let nibNameLoading = UINib(nibName: "LoadingCell", bundle: nil)
         collectionView.register(nibNameLoading, forCellWithReuseIdentifier: LoadingCell.identifier)
-        guard let navigationBar = navigationController?.navigationBar else {
-            return
-        }
-        
-        
-        navigationBar.addSubview(boxView)
         view.addSubview(imagePokeboll)
+        view.addSubview(boxView)
         view.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            boxView.topAnchor.constraint(equalTo: navigationBar.topAnchor, constant: 80),
-            boxView.leadingAnchor.constraint(equalTo: navigationBar.leadingAnchor),
-            boxView.trailingAnchor.constraint(equalTo: navigationBar.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor,  constant: 320),
+            boxView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            boxView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            boxView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            boxView.heightAnchor.constraint(equalToConstant: 200),
+            collectionView.topAnchor.constraint(equalTo: boxView.bottomAnchor,  constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            boxView.heightAnchor.constraint(equalToConstant: 200),
             imagePokeboll.topAnchor.constraint(equalTo: view.topAnchor),
             imagePokeboll.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imagePokeboll.trailingAnchor.constraint(equalTo: view.trailingAnchor),
