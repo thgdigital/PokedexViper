@@ -39,6 +39,12 @@
 		F38DF6C02464479200888F17 /* FilterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6BE2464479200888F17 /* FilterHeader.xib */; };
 		F38DF6C324644AD700888F17 /* BoxFilterTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */; };
 		F38DF6C424644AD700888F17 /* BoxFilterTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */; };
+		F38DF6C62464658000888F17 /* SectionsNumberRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6C52464658000888F17 /* SectionsNumberRange.swift */; };
+		F38DF6C92464674A00888F17 /* NumberRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6C72464674A00888F17 /* NumberRangeCell.swift */; };
+		F38DF6CA2464674A00888F17 /* NumberRangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6C82464674A00888F17 /* NumberRangeCell.xib */; };
+		F38DF6CC2464845200888F17 /* SectionsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6CB2464845200888F17 /* SectionsButtons.swift */; };
+		F38DF6CF246484BE00888F17 /* ButonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6CD246484BE00888F17 /* ButonsCell.swift */; };
+		F38DF6D0246484BE00888F17 /* ButonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6CE246484BE00888F17 /* ButonsCell.xib */; };
 		F3CD7FA22460D21100ABB9C5 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FA12460D21100ABB9C5 /* BoxView.swift */; };
 		F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FA92461075D00ABB9C5 /* HomeCell.swift */; };
 		F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */; };
@@ -127,6 +133,12 @@
 		F38DF6BE2464479200888F17 /* FilterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeader.xib; sourceTree = "<group>"; };
 		F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFilterTypeCell.swift; sourceTree = "<group>"; };
 		F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxFilterTypeCell.xib; sourceTree = "<group>"; };
+		F38DF6C52464658000888F17 /* SectionsNumberRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsNumberRange.swift; sourceTree = "<group>"; };
+		F38DF6C72464674A00888F17 /* NumberRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberRangeCell.swift; sourceTree = "<group>"; };
+		F38DF6C82464674A00888F17 /* NumberRangeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberRangeCell.xib; sourceTree = "<group>"; };
+		F38DF6CB2464845200888F17 /* SectionsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsButtons.swift; sourceTree = "<group>"; };
+		F38DF6CD246484BE00888F17 /* ButonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButonsCell.swift; sourceTree = "<group>"; };
+		F38DF6CE246484BE00888F17 /* ButonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButonsCell.xib; sourceTree = "<group>"; };
 		F3CD7FA12460D21100ABB9C5 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		F3CD7FA92461075D00ABB9C5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
@@ -303,6 +315,10 @@
 				F38DF6BE2464479200888F17 /* FilterHeader.xib */,
 				F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */,
 				F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */,
+				F38DF6C72464674A00888F17 /* NumberRangeCell.swift */,
+				F38DF6C82464674A00888F17 /* NumberRangeCell.xib */,
+				F38DF6CD246484BE00888F17 /* ButonsCell.swift */,
+				F38DF6CE246484BE00888F17 /* ButonsCell.xib */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -311,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				F38DF6B72464450000888F17 /* SectionsType.swift */,
+				F38DF6C52464658000888F17 /* SectionsNumberRange.swift */,
+				F38DF6CB2464845200888F17 /* SectionsButtons.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -481,11 +499,13 @@
 				F38DF6C424644AD700888F17 /* BoxFilterTypeCell.xib in Resources */,
 				F38DF6B524636E2C00888F17 /* CollectionViewFooter.xib in Resources */,
 				F38DF6B324636E2C00888F17 /* CollectionViewHeader.xib in Resources */,
+				F38DF6CA2464674A00888F17 /* NumberRangeCell.xib in Resources */,
 				F36AEEED245E69B70053F40A /* Assets.xcassets in Resources */,
 				F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */,
 				F3CD7FD72461E03C00ABB9C5 /* GenerationCell.xib in Resources */,
 				F3CD7FCC2461C06900ABB9C5 /* LoadingCell.xib in Resources */,
 				F38DF6BC246445D200888F17 /* FilterCell.xib in Resources */,
+				F38DF6D0246484BE00888F17 /* ButonsCell.xib in Resources */,
 				F38DF6C02464479200888F17 /* FilterHeader.xib in Resources */,
 				F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */,
 				F38DF6B024636E2C00888F17 /* CollectionViewCell.xib in Resources */,
@@ -581,6 +601,7 @@
 				F3CD7FEC2462FC4800ABB9C5 /* OrderButton.swift in Sources */,
 				F3CD7FE2246210DA00ABB9C5 /* GenerationHeader.swift in Sources */,
 				F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */,
+				F38DF6C62464658000888F17 /* SectionsNumberRange.swift in Sources */,
 				F36AEF09245E721F0053F40A /* Colors.swift in Sources */,
 				F38DF69B2463612800888F17 /* FiltersListView.swift in Sources */,
 				F3CD7FD12461DF7A00ABB9C5 /* GenerationProtocol.swift in Sources */,
@@ -591,6 +612,7 @@
 				F3CD7FF22463097600ABB9C5 /* OrderByProtocol.swift in Sources */,
 				F3CD7FBA2461A3B700ABB9C5 /* Kalo.swift in Sources */,
 				F38DF69D2463614900888F17 /* FiltersProtocol.swift in Sources */,
+				F38DF6C92464674A00888F17 /* NumberRangeCell.swift in Sources */,
 				F3CD7FC02461A5AC00ABB9C5 /* HomeProtocol.swift in Sources */,
 				F3CD7FF02463096000ABB9C5 /* OrderByPresenter.swift in Sources */,
 				F36AEEE4245E69B30053F40A /* AppDelegate.swift in Sources */,
@@ -605,7 +627,9 @@
 				F3CD7FDD2461F12000ABB9C5 /* Generationitem.swift in Sources */,
 				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
 				F38DF6B424636E2C00888F17 /* CollectionViewCell.swift in Sources */,
+				F38DF6CF246484BE00888F17 /* ButonsCell.swift in Sources */,
 				F38DF6B224636E2C00888F17 /* CollectionViewHeader.swift in Sources */,
+				F38DF6CC2464845200888F17 /* SectionsButtons.swift in Sources */,
 				F3CD7FB82461A37300ABB9C5 /* HomeModel.swift in Sources */,
 				F3CD7FDB2461ECE300ABB9C5 /* GenerationEntity.swift in Sources */,
 				F38DF6A924636DFF00888F17 /* Sections.swift in Sources */,

@@ -10,6 +10,8 @@ pod "LBTATools"
 pod 'Alamofire', '~> 5.0'
 pod 'SDWebImage', '~> 5.0'
 pod 'FittedSheets'
+pod "WARangeSlider"
+pod "TTRangeSlider"
   target 'PokedexViperTests' do
     inherit! :search_paths
     # Pods for testing

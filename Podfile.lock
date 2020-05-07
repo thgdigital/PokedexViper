@@ -5,12 +5,16 @@ PODS:
   - SDWebImage (5.6.1):
     - SDWebImage/Core (= 5.6.1)
   - SDWebImage/Core (5.6.1)
+  - TTRangeSlider (1.0.6)
+  - WARangeSlider (1.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - FittedSheets
   - LBTATools
   - SDWebImage (~> 5.0)
+  - TTRangeSlider
+  - WARangeSlider
 
 SPEC REPOS:
   trunk:
@@ -18,13 +22,17 @@ SPEC REPOS:
     - FittedSheets
     - LBTATools
     - SDWebImage
+    - TTRangeSlider
+    - WARangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   FittedSheets: 7f754c9f6fb4ea330cbc57c652b594255f2a6819
   LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
+  WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
 
-PODFILE CHECKSUM: 069ffe092ca6317943a99044f40b69f42c2da9df
+PODFILE CHECKSUM: c936ccc4bb1c65b70dd3f9ab8e6836b18272c74e
 
 COCOAPODS: 1.8.4

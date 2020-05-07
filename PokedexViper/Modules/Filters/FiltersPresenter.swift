@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct FiltersItem {
+class FiltersItem: NSObject {
     var name: String = ""
     var icos: [FiltersIcoItem] = []
     
@@ -18,19 +18,39 @@ struct FiltersItem {
     }
 }
 
-struct FiltersEntity {
-    let name: String
-    let icos: [FiltersIcoEntity]
+class FiltersEntity: NSObject {
+    var name: String = ""
+    var icos: [FiltersIcoEntity] = []
+        
+    init(name: String, icos: [FiltersIcoEntity]) {
+        self.name = name
+        self.icos = icos
+    }
 }
 
-struct FiltersIcoItem {
+class FiltersIcoItem: NSObject {
     let unselected: UIImage?
     let selected: UIImage?
+    init(unselected: UIImage?, selected: UIImage?) {
+        self.unselected = unselected
+        self.selected = selected
+    }
 }
 
-struct FiltersIcoEntity {
+class FiltersIcoEntity: NSObject {
     let unselected: String
     let selected: String
+    
+    init(unselected: String, selected: String) {
+           self.unselected = unselected
+           self.selected = selected
+       }
+}
+
+class FiltersItemNumberRange: FiltersItem {
+    init() {
+        super.init(entity: FiltersEntity(name: "Number Range", icos: [FiltersIcoEntity(unselected: "", selected: "")]))
+    }
 }
 
 class FiltersPresenter: FiltersPresenterInput {
@@ -64,7 +84,12 @@ class FiltersMapperSections {
         var sections = [Sections]()
         
         sections = items.map({ SectionsType(items: $0.icos, name: $0.name )})
+        let itemDefault = FiltersItemNumberRange()
+        let sectionNumberRange = SectionsNumberRange(items: [itemDefault], name: "Number Range")
+        sections.append(sectionNumberRange)
         
+        let sectionsNumber = SectionsButtons(items: [itemDefault], name: "")
+        sections.append(sectionsNumber)
         return sections
     }
 }
