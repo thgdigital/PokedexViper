@@ -17,11 +17,11 @@ class Sections {
     
     var visible: Bool = true
     
-    var id: String
+    var name: String
     
-    init(items: [Any], id: String) {
+    init(items: [Any], name: String) {
         self.items = items
-        self.id = id
+        self.name = name
     }
 
     

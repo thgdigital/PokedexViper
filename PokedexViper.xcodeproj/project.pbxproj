@@ -32,6 +32,13 @@
 		F38DF6B324636E2C00888F17 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6AD24636E2C00888F17 /* CollectionViewHeader.xib */; };
 		F38DF6B424636E2C00888F17 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6AE24636E2C00888F17 /* CollectionViewCell.swift */; };
 		F38DF6B524636E2C00888F17 /* CollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6AF24636E2C00888F17 /* CollectionViewFooter.xib */; };
+		F38DF6B82464450000888F17 /* SectionsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6B72464450000888F17 /* SectionsType.swift */; };
+		F38DF6BB246445D200888F17 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6B9246445D200888F17 /* FilterCell.swift */; };
+		F38DF6BC246445D200888F17 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6BA246445D200888F17 /* FilterCell.xib */; };
+		F38DF6BF2464479200888F17 /* FilterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6BD2464479200888F17 /* FilterHeader.swift */; };
+		F38DF6C02464479200888F17 /* FilterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6BE2464479200888F17 /* FilterHeader.xib */; };
+		F38DF6C324644AD700888F17 /* BoxFilterTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */; };
+		F38DF6C424644AD700888F17 /* BoxFilterTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */; };
 		F3CD7FA22460D21100ABB9C5 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FA12460D21100ABB9C5 /* BoxView.swift */; };
 		F3CD7FAB2461075D00ABB9C5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD7FA92461075D00ABB9C5 /* HomeCell.swift */; };
 		F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */; };
@@ -113,6 +120,13 @@
 		F38DF6AD24636E2C00888F17 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		F38DF6AE24636E2C00888F17 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F38DF6AF24636E2C00888F17 /* CollectionViewFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewFooter.xib; sourceTree = "<group>"; };
+		F38DF6B72464450000888F17 /* SectionsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsType.swift; sourceTree = "<group>"; };
+		F38DF6B9246445D200888F17 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		F38DF6BA246445D200888F17 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		F38DF6BD2464479200888F17 /* FilterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeader.swift; sourceTree = "<group>"; };
+		F38DF6BE2464479200888F17 /* FilterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeader.xib; sourceTree = "<group>"; };
+		F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFilterTypeCell.swift; sourceTree = "<group>"; };
+		F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxFilterTypeCell.xib; sourceTree = "<group>"; };
 		F3CD7FA12460D21100ABB9C5 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		F3CD7FA92461075D00ABB9C5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F3CD7FAA2461075D00ABB9C5 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
@@ -277,13 +291,28 @@
 		F38DF699246360C200888F17 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				F38DF6B6246444D700888F17 /* Sections */,
 				F38DF69A2463612800888F17 /* FiltersListView.swift */,
 				F38DF69C2463614900888F17 /* FiltersProtocol.swift */,
 				F38DF69E2463615500888F17 /* FiltersPresenter.swift */,
 				F38DF6A02463616500888F17 /* FiltersInteractor.swift */,
 				F38DF6A2246361E600888F17 /* FilterWireframe.swift */,
+				F38DF6B9246445D200888F17 /* FilterCell.swift */,
+				F38DF6BA246445D200888F17 /* FilterCell.xib */,
+				F38DF6BD2464479200888F17 /* FilterHeader.swift */,
+				F38DF6BE2464479200888F17 /* FilterHeader.xib */,
+				F38DF6C124644AD700888F17 /* BoxFilterTypeCell.swift */,
+				F38DF6C224644AD700888F17 /* BoxFilterTypeCell.xib */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		F38DF6B6246444D700888F17 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				F38DF6B72464450000888F17 /* SectionsType.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		F3CD7FB12461A07A00ABB9C5 /* Common */ = {
@@ -449,12 +478,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F36AEEF0245E69B70053F40A /* LaunchScreen.storyboard in Resources */,
+				F38DF6C424644AD700888F17 /* BoxFilterTypeCell.xib in Resources */,
 				F38DF6B524636E2C00888F17 /* CollectionViewFooter.xib in Resources */,
 				F38DF6B324636E2C00888F17 /* CollectionViewHeader.xib in Resources */,
 				F36AEEED245E69B70053F40A /* Assets.xcassets in Resources */,
 				F3CD7FAC2461075D00ABB9C5 /* HomeCell.xib in Resources */,
 				F3CD7FD72461E03C00ABB9C5 /* GenerationCell.xib in Resources */,
 				F3CD7FCC2461C06900ABB9C5 /* LoadingCell.xib in Resources */,
+				F38DF6BC246445D200888F17 /* FilterCell.xib in Resources */,
+				F38DF6C02464479200888F17 /* FilterHeader.xib in Resources */,
 				F3CD7FE3246210DB00ABB9C5 /* GenerationHeader.xib in Resources */,
 				F38DF6B024636E2C00888F17 /* CollectionViewCell.xib in Resources */,
 				F36AEEEB245E69B30053F40A /* Main.storyboard in Resources */,
@@ -553,6 +585,7 @@
 				F38DF69B2463612800888F17 /* FiltersListView.swift in Sources */,
 				F3CD7FD12461DF7A00ABB9C5 /* GenerationProtocol.swift in Sources */,
 				F3CD7FDF2461F28300ABB9C5 /* GenerationWiframe.swift in Sources */,
+				F38DF6BB246445D200888F17 /* FilterCell.swift in Sources */,
 				F3CD7FB42461A09F00ABB9C5 /* PokemonManager.swift in Sources */,
 				F3CD7FC42461A7D500ABB9C5 /* HomeEntity.swift in Sources */,
 				F3CD7FF22463097600ABB9C5 /* OrderByProtocol.swift in Sources */,
@@ -568,6 +601,7 @@
 				F3CD7FEE246306B700ABB9C5 /* OrderByWiframe.swift in Sources */,
 				F3CD7FD32461DFAA00ABB9C5 /* GenerationPresenter.swift in Sources */,
 				F3CD7FC22461A5BE00ABB9C5 /* HomePresenter.swift in Sources */,
+				F38DF6C324644AD700888F17 /* BoxFilterTypeCell.swift in Sources */,
 				F3CD7FDD2461F12000ABB9C5 /* Generationitem.swift in Sources */,
 				F36AEF07245E70150053F40A /* Typography.swift in Sources */,
 				F38DF6B424636E2C00888F17 /* CollectionViewCell.swift in Sources */,
@@ -578,7 +612,9 @@
 				F36AEEE6245E69B30053F40A /* SceneDelegate.swift in Sources */,
 				F3CD7FE7246223D600ABB9C5 /* GenerationPokemonEntity.swift in Sources */,
 				F3CD7FCB2461C06900ABB9C5 /* LoadingCell.swift in Sources */,
+				F38DF6B82464450000888F17 /* SectionsType.swift in Sources */,
 				F38DF6B124636E2C00888F17 /* CollectionViewFooter.swift in Sources */,
+				F38DF6BF2464479200888F17 /* FilterHeader.swift in Sources */,
 				F38DF69F2463615500888F17 /* FiltersPresenter.swift in Sources */,
 				F36AEF0D245F199A0053F40A /* HomeWireframe.swift in Sources */,
 				F3CD7FB024610E2700ABB9C5 /* ReusableIdentifier.swift in Sources */,

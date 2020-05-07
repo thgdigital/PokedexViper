@@ -32,9 +32,24 @@ class FiltersInteractor: FiltersInteractorInput {
             .init(unselected: "Steel-Unselected", selected: "Steel-Selected"),
             .init(unselected: "Water-Unselected", selected: "Water-Selected"),
         ]
+        
+        let icosHeights: [FiltersIcoEntity] = [
+            .init(unselected: "Medium-Unselected", selected: "Medium-Selected"),
+            .init(unselected: "Short-Unselected", selected: "Short-Selected"),
+            .init(unselected: "Tall-Unselected", selected: "Tall-Selected")
+        ]
+        
+        let icosWeights: [FiltersIcoEntity] = [
+                   .init(unselected: "Heavy-Unselected", selected: "Heavy-Selected"),
+                   .init(unselected: "Light-Unselected", selected: "Light-Selected"),
+                   .init(unselected: "Weight-Normal-Unselected", selected: "Weight-Normal-Selected")
+            ]
+        
         self.ouput?.fetched(entites: [
             .init(name: "Types", icos: icos),
-            .init(name: "Weaknesses", icos: icos)
+            .init(name: "Weaknesses", icos: icos),
+            .init(name: "Heights", icos: icosHeights),
+            .init(name: "Weights", icos: icosWeights)
             ]
         )
     }

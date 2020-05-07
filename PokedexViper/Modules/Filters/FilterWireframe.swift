@@ -18,6 +18,7 @@ class FilterWireframe {
          let layout  = UICollectionViewFlowLayout()
         let filtersView = FiltersListView(collectionViewLayout: layout)
         filtersView.preenter = presenter
+        presenter.output = filtersView
         return filtersView
     }
 }

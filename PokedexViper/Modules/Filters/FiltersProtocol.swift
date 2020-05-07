@@ -13,7 +13,7 @@ protocol FiltersPresenterInput {
 }
 
 protocol FiltersPresenterOuput: class {
-   
+    func reload(sections: [Sections])
 }
 protocol FiltersInteractorInput {
      func updateView()
